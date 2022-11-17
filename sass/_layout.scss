@@ -1,0 +1,142 @@
+@use "variables";
+
+
+
+header{
+        background: variables.$color-principal;
+    
+    .marca{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 60%;
+        padding: 1em;
+
+    }
+
+    .menu{
+        background: variables.$color-secundario;
+
+        &-sm{
+            display: block;
+            text-align: center;
+            padding: 0.5em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 1.3em;
+            height: 100%;
+        }
+
+        &-md{
+            display: none;
+            flex-flow: column;
+            align-items: center;
+            gap: 0.9em;
+            list-style: none;
+            padding: 1em 0;
+        }
+
+        .active{
+            font-weight: 600;
+            text-decoration: underline 2px;
+            text-underline-offset: 0.2em
+        }
+    }
+    @media only screen and (min-width: 400px){
+        header .marca{
+            display: flex;
+            justify-content: flex-start;
+            gap: 4vw;
+            font-size: 75%;
+            padding: 1em 5%; 
+        }
+    }
+    @media only screen and (min-width: 473px){
+        header .marca{
+            padding: 1em 5%; 
+        }
+    }
+    @media only screen and (min-width: 768px){
+        header .marca{
+            font-size: 100%;
+            gap: 1.3em;
+        }
+    
+        .logo{
+            width: 100px;
+            height: 75px;
+        }
+        .menu-sm{
+            display: none;
+        }
+    
+        .menu-md{
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            gap: 1em;
+            padding: 1em 5%;
+    
+        }
+    
+    }
+}
+
+footer{
+    background: variables.$color-secundario;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    text-align: center;
+
+    padding: 1em 5%;
+
+    .redes{
+        display: flex;
+        gap: 0.5em;
+        font-size: 1.8rem;
+    }
+
+    .footer-contacto{
+        line-height: 1.5em;
+    }
+    a{
+        font-weight: 500;
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+    }
+    @media only screen and (min-width: 600px){
+        footer{
+            display: flex;
+            flex-flow: row;
+        }
+    }
+}
+
+main{
+    .principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .titulos{
+        background: variables.$color-principal;
+        }
+    
+    .contenedor{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .imgSeg{
+            justify-content: space-around;
+            height: auto;
+            width: auto;
+        }
+}
